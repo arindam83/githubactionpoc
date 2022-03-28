@@ -1,11 +1,26 @@
 
 provider "azurerm"{
+   subscription_id =     var.subscription_id
+  client_id       =     var.client_id
+  client_secret   =     var.client_secret
+  tenant_id       =     var.tenant_id
    features {}
 }
 variable "prefix" {
   default = "arindam"
 }
-
+variable "subscription_id" {
+  default = ""
+}
+variable "client_id" {
+  default = ""
+}
+variable "client_secret" {
+  default = ""
+}
+variable "tenant_id" {
+  default = ""
+}
 resource "azurerm_resource_group" "main" {
   name     = "${var.prefix}-resources"
   location = var.mylocation

@@ -1,7 +1,7 @@
  name: 'Terraform GitHub Actions'
  defaults:
    run:
-     working-directory: "/learn-terraform-azure/section4"
+     working-directory: .
  on:
    - pull_request
    - push
